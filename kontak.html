@@ -1,7 +1,8 @@
-<!DOCTYPE html><html lang='id'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Kontak</title><link rel='stylesheet' href='style.css'></head><body>
+<!DOCTYPE html><html lang='id'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Kontak</title><link rel='stylesheet' href='css/style.css'>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></head><body>
 <div class='loader'>MOODFIT</div>
 <header>
-
     <nav class="navbar">
 
         <div class="logo">
@@ -33,17 +34,89 @@
     </nav>
 
 </header>
+<section class="contact-section">
 
-<section class='section'><h1>Kontak Kami</h1>
-<div class='card'>
-<form>
-<input style='width:100%;padding:10px;margin:5px 0' placeholder='Nama'>
-<input style='width:100%;padding:10px;margin:5px 0' placeholder='Email'>
-<textarea style='width:100%;padding:10px;margin:5px 0' placeholder='Pesan'></textarea>
-<button class='btn' type='button'>Kirim Pesan</button>
-</form>
-</div></section>
+    <div class="contact-left">
+
+        <span class="badge">📩 Hubungi Kami</span>
+
+        <h1>Mari Terhubung Dengan MoodFit</h1>
+
+        <p>
+            Punya pertanyaan, saran, atau ingin bekerja sama?
+            Tim MoodFit siap membantu kamu kapan saja.
+        </p>
+
+        <div class="contact-info">
+
+            <div class="info-item">
+                📧 support@moodfit.id
+            </div>
+
+            <div class="info-item">
+                📱 +62 812 3456 7890
+            </div>
+
+            <div class="info-item">
+                📍 Jakarta, Indonesia
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="contact-right">
+
+        <form id="contactForm">
+
+            <div class="input-group">
+
+                <input
+                id="name"
+                type="text"
+                placeholder="Nama Lengkap"
+                required>
+
+            </div>
+
+            <div class="input-group">
+
+                <input
+                id="email"
+                type="email"
+                placeholder="Alamat Email"
+                required>
+
+            </div>
+
+            <div class="input-group">
+
+                <textarea
+                id="message"
+                placeholder="Tulis pesan kamu..."
+                required></textarea>
+
+            </div>
+
+            <button
+            type="submit"
+            class="contact-btn">
+
+                Kirim Pesan 🚀
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
 
 <a class='whatsapp' href='#'>💬</a>
 <footer>© 2026 MOODFIT - Wear Your Mood, Express Yourself</footer>
-<script src='main.js'></script></body></html>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src='js/main.js'></script>
+<script type="module" src="js/contact.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="module" src="js/auth.js"></script>
+</body></html>
