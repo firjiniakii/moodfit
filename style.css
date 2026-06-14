@@ -705,3 +705,196 @@ nav ul li a.active{
     }
 
 }
+
+/* ========================= */
+/* PREMIUM NAVBAR */
+/* ========================= */
+
+.navbar{
+
+    position:sticky;
+    top:0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:rgba(255,255,255,0.85);
+
+    backdrop-filter:blur(20px);
+
+    z-index:999;
+
+    box-shadow:0 2px 20px rgba(0,0,0,0.05);
+
+}
+
+.logo{
+
+    font-size:2rem;
+    font-weight:700;
+
+    color:#4d403d;
+
+}
+
+.nav-links{
+
+    display:flex;
+    list-style:none;
+    gap:30px;
+
+}
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:#4d403d;
+
+    font-weight:500;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+.nav-links a:hover{
+
+    color:#d9a8a1;
+
+}
+
+.nav-links a::after{
+
+    content:'';
+
+    position:absolute;
+
+    left:0;
+    bottom:-6px;
+
+    width:0;
+    height:3px;
+
+    background:#d9a8a1;
+
+    transition:.3s;
+
+    border-radius:10px;
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+.nav-links a.active{
+
+    color:#d9a8a1;
+
+}
+
+.nav-links a.active::after{
+
+    width:100%;
+
+}
+
+/* ========================= */
+/* HAMBURGER */
+/* ========================= */
+
+.hamburger{
+
+    display:none;
+
+    flex-direction:column;
+
+    cursor:pointer;
+
+    gap:5px;
+
+}
+
+.hamburger span{
+
+    width:28px;
+    height:3px;
+
+    background:#4d403d;
+
+    border-radius:10px;
+
+    transition:.4s;
+
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:768px){
+
+.nav-links{
+
+    position:fixed;
+
+    top:80px;
+    right:-100%;
+
+    width:280px;
+    height:100vh;
+
+    background:white;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    padding-top:60px;
+
+    transition:.4s;
+
+    box-shadow:-10px 0 30px rgba(0,0,0,.1);
+
+}
+
+.nav-links.active{
+
+    right:0;
+
+}
+
+.hamburger{
+
+    display:flex;
+
+}
+
+.hamburger.active span:nth-child(1){
+
+    transform:rotate(45deg) translate(5px,5px);
+
+}
+
+.hamburger.active span:nth-child(2){
+
+    opacity:0;
+
+}
+
+.hamburger.active span:nth-child(3){
+
+    transform:rotate(-45deg) translate(7px,-7px);
+
+}
+
+}
