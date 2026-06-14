@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang='id'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Mood Box</title><link rel='stylesheet' href='style.css'></head><body>
+<!DOCTYPE html><html lang='id'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Mood Box</title><link rel='stylesheet' href='css/style.css'>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></head><body>
 <div class='loader'>MOODFIT</div>
 <header>
 
@@ -54,7 +56,7 @@
     <div class="mood-card reveal">
 
         <div class="mood-image">
-            <img src="soft-girl.png" alt="Soft Girl">
+            <img src="images/soft-girl.png" alt="Soft Girl">
         </div>
 
         <div class="mood-info">
@@ -76,7 +78,14 @@
 
             <div class="price-row">
                 <h3>Rp149.000</h3>
-                <a href="#" class="buy-btn">Pesan Sekarang</a>
+                <button
+class="buy-btn order-btn"
+data-box="Soft Girl Mood Box"
+data-price="149000">
+
+Pesan Sekarang
+
+</button>
             </div>
 
         </div>
@@ -88,7 +97,7 @@
     <div class="mood-card reverse reveal">
 
         <div class="mood-image">
-            <img src="confident.png" alt="Confident">
+            <img src="images/confident.png" alt="Confident">
         </div>
 
         <div class="mood-info">
@@ -110,7 +119,14 @@
 
             <div class="price-row">
                 <h3>Rp169.000</h3>
-                <a href="#" class="buy-btn">Pesan Sekarang</a>
+                <button
+class="buy-btn order-btn"
+data-box="Confident Mood Box"
+data-price="169000">
+
+Pesan Sekarang
+
+</button>
             </div>
 
         </div>
@@ -122,7 +138,7 @@
     <div class="mood-card reveal">
 
         <div class="mood-image">
-            <img src="cozy.png" alt="Cozy">
+            <img src="images/cozy.png" alt="Cozy">
         </div>
 
         <div class="mood-info">
@@ -144,7 +160,14 @@
 
             <div class="price-row">
                 <h3>Rp139.000</h3>
-                <a href="#" class="buy-btn">Pesan Sekarang</a>
+                <button
+class="buy-btn order-btn"
+data-box="Cozy Mood Box"
+data-price="139000">
+
+Pesan Sekarang
+
+</button>
             </div>
 
         </div>
@@ -156,7 +179,7 @@
     <div class="mood-card reverse reveal">
 
         <div class="mood-image">
-            <img src="casual-college.png" alt="Casual">
+            <img src="images/casual-college.png" alt="Casual">
         </div>
 
         <div class="mood-info">
@@ -178,7 +201,14 @@
 
             <div class="price-row">
                 <h3>Rp149.000</h3>
-                <a href="#" class="buy-btn">Pesan Sekarang</a>
+                <button
+class="buy-btn order-btn"
+data-box="Casual College Box"
+data-price="149000">
+
+Pesan Sekarang
+
+</button>
             </div>
 
         </div>
@@ -190,7 +220,7 @@
     <div class="mood-card reveal">
 
         <div class="mood-image">
-            <img src="party.png" alt="Party">
+            <img src="images/party.png" alt="Party">
         </div>
 
         <div class="mood-info">
@@ -212,7 +242,14 @@
 
             <div class="price-row">
                 <h3>Rp179.000</h3>
-                <a href="#" class="buy-btn">Pesan Sekarang</a>
+               <button
+class="buy-btn order-btn"
+data-box="Party Mood Box"
+data-price="179000">
+
+Pesan Sekarang
+
+</button>
             </div>
 
         </div>
@@ -220,6 +257,67 @@
     </div>
 
 </section>
+
+<div class="modal" id="orderModal">
+
+    <div class="modal-content">
+
+        <span class="close-modal">&times;</span>
+
+        <h2>Pesan Mood Box</h2>
+
+        <form id="orderForm">
+
+    <input
+    type="text"
+    id="customerName"
+    placeholder="Nama Lengkap"
+    required>
+
+    <input
+    type="email"
+    id="customerEmail"
+    placeholder="Email"
+    required>
+
+    <input
+    type="tel"
+    id="customerPhone"
+    placeholder="Nomor WhatsApp"
+    required>
+
+    <textarea
+    id="customerAddress"
+    placeholder="Alamat Lengkap"
+    required></textarea>
+
+    <input
+    id="selectedBox"
+    readonly>
+
+    <input
+    id="selectedPrice"
+    readonly>
+
+    <button
+    type="submit"
+    class="btn">
+
+    Konfirmasi Pesanan
+
+    </button>
+
+</form>
+
+    </div>
+
+</div>
 <a class='whatsapp' href='#'>💬</a>
 <footer>© 2026 MOODFIT - Wear Your Mood, Express Yourself</footer>
-<script src='main.js'></script></body></html>
+<script src="js/main.js"></script>
+
+<script type="module" src="js/order.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="module" src="js/auth.js"></script>
+</body>
+</html>
